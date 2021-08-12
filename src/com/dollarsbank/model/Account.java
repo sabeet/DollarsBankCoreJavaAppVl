@@ -10,21 +10,22 @@ public class Account {
     private String first_name;
     private String last_name;
     private String phone_number;
+    private String address;
     private String password;
     private double checkings;
     private double savings;
     private List<String> transaction_history;
 
-    public Account(long user_id, String first_name, String last_name, String phone_number, String password, double checkings, double savings, List<String> transaction_history) {
+    public Account(String first_name, String last_name, String phone_number, String password, String address, double checkings, double savings) {
         super();
         this.user_id = idCountStart++;
         this.first_name = first_name;
         this.last_name = last_name;
         this.phone_number = phone_number;
+        this.address = address;
         this.password = password;
         this.checkings = checkings;
         this.savings = savings;
-        this.transaction_history = transaction_history;
     }
 
     public long getUser_id() {
@@ -91,6 +92,18 @@ public class Account {
         this.transaction_history = transaction_history;
     }
 
+    public void addTransactionHistory(String str){
+        transaction_history.add(str);
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
     //TODO: Modify this to represent account better
     @Override
     public String toString() {
@@ -99,6 +112,7 @@ public class Account {
                 ", first_name='" + first_name + '\'' +
                 ", last_name='" + last_name + '\'' +
                 ", phone_number='" + phone_number + '\'' +
+                ", address='" + address + '\'' +
                 ", password='" + password + '\'' +
                 ", checkings=" + checkings +
                 ", savings=" + savings +

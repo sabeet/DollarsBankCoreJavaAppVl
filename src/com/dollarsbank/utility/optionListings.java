@@ -12,4 +12,10 @@ public class optionListings {
 
         System.out.println("\nEnter a choice(1,2, or 3): ");
     }
+
+    public static void initRegAccMenuHeader() {
+        System.out.println("+-----------------------------+");
+        System.out.println("|Enter Details For New Account|");
+        System.out.println("+-----------------------------+");
+    }
 }
