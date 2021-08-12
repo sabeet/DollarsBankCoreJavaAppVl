@@ -1,5 +1,6 @@
 package com.dollarsbank.utility;
 
+import com.dollarsbank.controller.Login;
 import com.dollarsbank.controller.Registration;
 import com.dollarsbank.repository.AccountRepo;
 
@@ -16,7 +17,7 @@ public class menu {
         do{
             try {
                 optionListings.initMenu();
-                choice = input.nextInt();
+                choice = input.nextInt(); //look into hasNextInt
 
                 switch (choice) {
                     case 1:
@@ -24,13 +25,13 @@ public class menu {
                         choice = 0; //this is to reset the loop
                         break;
                     case 2:
-                        System.out.println(AccountRepo.customerRepo.get(0).toString()); //remove when done
+                        Login.menu();
                         choice = 0; //this is to reset the loop
                         break;
                     case 3:
-
+                        //System.out.println(AccountRepo.customerRepo.stream().findFirst()); //remove when done
                         System.out.println("Thank you for your patronage. See you again. \nThis program shall now terminate...");
-                        System.exit(0);
+                        System.exit(0); //close program
                     default:
                         System.out.println("\nInvalid Entry. Please Try Again\n");
                 }

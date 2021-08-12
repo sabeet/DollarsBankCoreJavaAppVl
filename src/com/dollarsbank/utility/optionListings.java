@@ -14,8 +14,24 @@ public class optionListings {
     }
 
     public static void initRegAccMenuHeader() {
-        System.out.println("+-----------------------------+");
+        System.out.println("\n+-----------------------------+");
         System.out.println("|Enter Details For New Account|");
-        System.out.println("+-----------------------------+");
+        System.out.println("+-----------------------------+\n");
+    }
+
+    public static void loginMenuHeader() {
+        System.out.println("\n+----------------+");
+        System.out.println("|Enter Login Menu|");
+        System.out.println("+----------------+\n");
+    }
+
+    public static void bankingMenuHeader(String custName) {
+        System.out.println("\n+-----------------------------+");
+        System.out.println("|WELCOME TO DOLLARSBANK, "+ custName +" |");
+        System.out.println("+------------------------------+\n");
+    }
+
+    public static void depositHeader(){
+
     }
 }

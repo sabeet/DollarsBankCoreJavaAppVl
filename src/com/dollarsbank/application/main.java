@@ -10,8 +10,7 @@ import java.util.List;
 
 public class main {
     public static void main(String[] args) {
-        //AccountRepo.customerRepo.add(new Account("","","","",0,0));
-        //ArrayList<Account> accountRepo = new ArrayList<>();
+        AccountRepo.dummyData();
         menu.run();
     }
 }
