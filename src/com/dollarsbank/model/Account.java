@@ -1,5 +1,7 @@
 package com.dollarsbank.model;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Account {
@@ -14,7 +16,7 @@ public class Account {
     private String password;
     private double checkings;
     private double savings;
-    private List<String> transaction_history;
+    private ArrayList<String> transaction_history = new ArrayList<>();
 
     public Account(String first_name, String last_name, String phone_number, String password, String address, double checkings, double savings) {
         super();
@@ -88,7 +90,7 @@ public class Account {
         return transaction_history;
     }
 
-    public void setTransaction_history(List<String> transaction_history) {
+    public void setTransaction_history(ArrayList<String> transaction_history) {
         this.transaction_history = transaction_history;
     }
 

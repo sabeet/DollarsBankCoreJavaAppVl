@@ -34,6 +34,7 @@ public class Registration {
         String first_transaction = "\n----------------\nTransaction recorded on : " + now + "\nInitial deposit of " + customer_init_depo + " has been made to Checkings Account.\n----------------\n" ;
 
         Account customer = new Account(customer_fname, customer_lname, customer_phone,  customer_password, customer_addr, customer_init_depo, 0);
+        customer.addTransactionHistory(first_transaction);
         AccountRepo.customerRepo.add(customer);
 
         System.out.println("Thank you for choosing DOLLARSBANK, " + customer_fname);
