@@ -39,7 +39,7 @@ public class Login {
             }
             else{
                 System.out.println("You've logged in");
-                Banking.menu(Acc.get(0).getFirst_name());
+                Banking.menu(Acc.get(0).getFirst_name(), Acc.get(0).getUser_id());
             }
         }
         //enter new menu

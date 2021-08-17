@@ -6,7 +6,7 @@ import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Banking {
-    public static void menu(String fname) {
+    public static void menu(String fname, long id) {
 
         optionListings.bankingMenuHeader(fname);
 
@@ -15,30 +15,41 @@ public class Banking {
 
         do{
             try{
+                //what are my options
+                System.out.println("" +
+                        "1." +
+                        "2." +
+                        "3." +
+                        "4. " +
+                        "5. " +
+                        "6. " +
+                        "");
+
+                choice = input.nextInt();
+
                 switch(choice) {
                     case 1: //deposit
-
+                        Deposit.run(id);
                         choice = 0;
                         break;
                     case 2: //withdrawal
-
+                        Withdrawal.run(id);
                         choice = 0;
                         break;
                     case 3: //funds
-
+                        FundsTransfer.run(id);
                         choice = 0;
                         break;
                     case 4: //view 5 recent transactions
-
+                        LastFiveTransaction.run(id);
                         choice = 0;
                         break;
-                    case 5: //
-
+                    case 5: //customer info
+                        CustomerInfo.run(id);
                         choice = 0;
                         break;
                     case 6:
-
-                        choice = 0;
+                        System.out.println("Signing out\n");
                         break;
                     default:
                         System.out.println("\nInvalid Entry. Please Try Again\n");
