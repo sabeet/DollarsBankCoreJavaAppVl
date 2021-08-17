@@ -17,7 +17,7 @@ public class LastFiveTransaction {
 
 
         if(al_size < 6){
-            for(int i = 0; i <= al_size; i++){
+            for(int i = 0; i <= al_size - 1; i++){
                 System.out.println(curr_account.orElseThrow().getTransaction_history().get(i));
             }
         }

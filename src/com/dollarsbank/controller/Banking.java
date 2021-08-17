@@ -1,5 +1,6 @@
 package com.dollarsbank.controller;
 
+import com.dollarsbank.utility.menu;
 import com.dollarsbank.utility.optionListings;
 
 import java.util.InputMismatchException;
@@ -17,12 +18,12 @@ public class Banking {
             try{
                 //what are my options
                 System.out.println("" +
-                        "1." +
-                        "2." +
-                        "3." +
-                        "4. " +
-                        "5. " +
-                        "6. " +
+                        "1. Deposit\n" +
+                        "2. Withdrawal\n" +
+                        "3. Funds Transfer\n" +
+                        "4. View 5 Recent Transaction\n" +
+                        "5. Display Your Information\n" +
+                        "6. Sign Out\n" +
                         "");
 
                 choice = input.nextInt();
@@ -50,6 +51,7 @@ public class Banking {
                         break;
                     case 6:
                         System.out.println("Signing out\n");
+                        menu.run();
                         break;
                     default:
                         System.out.println("\nInvalid Entry. Please Try Again\n");
