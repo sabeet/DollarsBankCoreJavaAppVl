@@ -1,5 +1,6 @@
 package com.dollarsbank.controller;
 
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
 import java.util.stream.Collectors;
@@ -23,6 +24,8 @@ public class Login {
             //if(){
 
             //}
+            try{
+
             System.out.println("Enter User id: ");
             long id = input.nextLong();
 
@@ -36,15 +39,20 @@ public class Login {
 
             List<Account> Acc = AccountRepo.customerRepo.stream().filter(e -> e.getUser_id() == id).collect(Collectors.toList());
             String retrievedPassword = Acc.get(0).getPassword();
-            System.out.println(Acc.toString());
-            System.out.println("Retrieved password is: " + retrievedPassword);
-            System.out.println("Password entered is: " + pass);
-            if(!retrievedPassword.equals(pass)) {
+
+            if (!retrievedPassword.equals(pass)) {
                 System.out.println("Invalid Entry. Try Again");
-            }
-            else{
+            } else {
                 System.out.println("You've logged in");
                 Banking.menu(Acc.get(0).getFirst_name(), Acc.get(0).getUser_id());
+            }
+            }catch(InputMismatchException e){
+                System.out.println("Bad input. Please try again.");
+                Login.menu();
+            }
+            catch(IndexOutOfBoundsException e){
+                System.out.println("Invalid user. Please Try again");
+                Login.menu();
             }
         }
         //enter new menu

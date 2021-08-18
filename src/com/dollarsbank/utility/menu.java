@@ -36,7 +36,8 @@ public class menu {
                         System.out.println("\nInvalid Entry. Please Try Again\n");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("You entered a letter or a string of letters.\nThis program shall now terminate.");
+                System.out.println("You entered a letter or a string of letters.\nThis program shall now restart.");
+                menu.run();
                  //this is not functioning as required
                 choice = 5;
                 break;

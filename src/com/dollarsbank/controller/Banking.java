@@ -17,7 +17,7 @@ public class Banking {
         do{
             try{
                 //what are my options
-                System.out.println("" +
+                System.out.println("\n" +
                         "1. Deposit\n" +
                         "2. Withdrawal\n" +
                         "3. Funds Transfer\n" +
@@ -57,7 +57,8 @@ public class Banking {
                         System.out.println("\nInvalid Entry. Please Try Again\n");
                 }
             } catch (InputMismatchException e){
-                System.out.println("You entered a letter or a string of letters.\nThis program shall now terminate.");
+                System.out.println("You entered a letter or a string of letters.\n Please enter a proper input");
+                Banking.menu(fname, id);
                 break;
             }
 
