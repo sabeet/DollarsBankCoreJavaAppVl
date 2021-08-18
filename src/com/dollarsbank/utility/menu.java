@@ -29,13 +29,13 @@ public class menu {
                         choice = 0; //this is to reset the loop
                         break;
                     case 3:
-                        System.out.println("Thank you for your patronage. See you again. \nThis program shall now terminate...");
+                        System.out.println("\n\u001b[31mThank you for your patronage. See you again. \nThis program shall now terminate... \u001b[0m");
                         System.exit(0); //close program
                     default:
-                        System.out.println("\nInvalid Entry. Please Try Again\n");
+                        System.out.println("\n\u001b[31mInvalid Entry. Please Try Again\u001b[0m\n");
                 }
             } catch (InputMismatchException e) {
-                System.out.println("You entered a letter or a string of letters.\nThis program shall now restart.");
+                System.out.println("\u001b[31mYou entered a letter or a string of letters.\nThis program shall now restart.\u001b[0m");
                 menu.run();
                  //this is not functioning as required
                 choice = 5;

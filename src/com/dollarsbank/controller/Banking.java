@@ -26,7 +26,7 @@ public class Banking {
                         "6. Sign Out\n" +
                         "\n");
 
-                System.out.println("\nEnter a choice(1 - 6): \n");
+                System.out.println("\n \u001b[32m Enter a choice(1 - 6): \u001b[0m \n");
 
                 choice = input.nextInt();
 
@@ -52,14 +52,14 @@ public class Banking {
                         choice = 0;
                         break;
                     case 6:
-                        System.out.println("Signing out\n");
+                        System.out.println("\u001b[31m Signing out \u001b[0m \n");
                         menu.run();
                         break;
                     default:
-                        System.out.println("\nInvalid Entry. Please Try Again\n");
+                        System.out.println("\n \u001b[31m Invalid Entry. Please Try Again \u001b[0m \n");
                 }
             } catch (InputMismatchException e){
-                System.out.println("You entered a letter or a string of letters.\n Please enter a proper input");
+                System.out.println("\u001b[31m You entered a letter or a string of letters.\n Please enter a proper input \u001b[0m");
                 Banking.menu(fname, id);
                 break;
             }

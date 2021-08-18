@@ -19,7 +19,5 @@ public class CustomerInfo {
         System.out.println("Checkings Balance: " + curr_account.orElseThrow().getCheckings());
         System.out.println("Savings Balance: " + curr_account.orElseThrow().getSavings());
 
-
-
     }
 }

@@ -41,17 +41,17 @@ public class Login {
             String retrievedPassword = Acc.get(0).getPassword();
 
             if (!retrievedPassword.equals(pass)) {
-                System.out.println("Invalid Entry. Try Again");
+                System.out.println("\u001b[31mInvalid Entry. Try Again\u001b[0m");
             } else {
                 System.out.println("You've logged in");
                 Banking.menu(Acc.get(0).getFirst_name(), Acc.get(0).getUser_id());
             }
             }catch(InputMismatchException e){
-                System.out.println("Bad input. Please try again.");
+                System.out.println("\u001b[31mBad input. Please try again.\u001b[0m");
                 Login.menu();
             }
             catch(IndexOutOfBoundsException e){
-                System.out.println("Invalid user. Please Try again");
+                System.out.println("\u001b[31mInvalid user. Please Try again\u001b[0m");
                 Login.menu();
             }
         }

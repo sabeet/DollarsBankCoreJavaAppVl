@@ -30,7 +30,7 @@ public class Deposit {
 
         AccountRepo.customerRepo.stream().filter(e -> e.getUser_id() == ac_id).forEach(e -> e.addTransactionHistory(transaction_hist_update));
 
-        System.out.println("Account updated. You're checking's balance is now: " + curr_account.orElseThrow().getCheckings()); // display new value
+        System.out.println("Account updated. Your checking's balance is now: " + curr_account.orElseThrow().getCheckings()); // display new value
 
     }
 }
