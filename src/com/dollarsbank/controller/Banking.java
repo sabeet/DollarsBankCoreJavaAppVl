@@ -9,13 +9,13 @@ import java.util.Scanner;
 public class Banking {
     public static void menu(String fname, long id) {
 
-        optionListings.bankingMenuHeader(fname);
-
         Scanner input = new Scanner(System.in);
         int choice = 0;
 
         do{
             try{
+
+                optionListings.bankingMenuHeader(fname);
                 //what are my options
                 System.out.println("\n" +
                         "1. Deposit\n" +
@@ -24,7 +24,9 @@ public class Banking {
                         "4. View 5 Recent Transaction\n" +
                         "5. Display Your Information\n" +
                         "6. Sign Out\n" +
-                        "");
+                        "\n");
+
+                System.out.println("\nEnter a choice(1 - 6): \n");
 
                 choice = input.nextInt();
 

@@ -29,7 +29,6 @@ public class menu {
                         choice = 0; //this is to reset the loop
                         break;
                     case 3:
-                        //System.out.println(AccountRepo.customerRepo.stream().findFirst()); //remove when done
                         System.out.println("Thank you for your patronage. See you again. \nThis program shall now terminate...");
                         System.exit(0); //close program
                     default:
